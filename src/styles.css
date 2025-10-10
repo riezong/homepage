@@ -6,6 +6,7 @@
 }
 * {
   margin: 0;
+  border: 1px solid whitesmoke;
 }
 body {
   line-height: 1.5;
@@ -51,4 +52,31 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+.about {
+  height: 200px;
+}
+
+.my-work {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.placeholder-card {
+  width: 33.33%;
+  height: 200px;
+}
+
+.footer {
+  height: 200px;
+  display: flex;
+}
+
+.contact-me {
+  flex-grow: 2;
+}
+
+.footer-img {
+  flex-grow: 3;
 }
