@@ -6,7 +6,7 @@
 }
 * {
   margin: 0;
-  border: 1px solid whitesmoke;
+  /* border: 1px solid navy; */
 }
 body {
   line-height: 1.5;
@@ -54,29 +54,111 @@ h6 {
   isolation: isolate;
 }
 
+@media (max-width: 375px) {
+}
+
+@media (max-width: 1024px) {
+}
+
+.dropshadow {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
 .about {
-  height: 200px;
+  padding: 62px 90px;
+  display: flex;
+  background-color: cyan;
+}
+
+.profile-pic {
+  width: 547px;
+  height: 596px;
+  flex-shrink: 0;
+}
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bio {
+  margin: 62px 0px 48px 0px;
+  padding: 32px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: white;
+}
+
+.bio .social-icons {
+  flex-grow: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.social-icons img {
+  height: 32px;
 }
 
 .my-work {
-  display: flex;
-  flex-wrap: wrap;
+  padding: 62px 90px 126px 90px;
 }
 
-.placeholder-card {
-  width: 33.33%;
-  height: 200px;
+.work-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 60px;
+  column-gap: 50px;
+}
+
+.work-card {
+  /* width: ; */
+  height: 468px;
+  display: flex;
+  flex-direction: column;
+}
+
+.work-img {
+  padding: 28px;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: red;
+}
+
+.work-desc {
+  padding: 28px;
+  flex-grow: 1;
 }
 
 .footer {
-  height: 200px;
+  padding: 70px 90px;
+  height: 706px;
   display: flex;
+  background-color: cyan;
 }
 
 .contact-me {
   flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-me .social-icons {
+  flex-grow: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 8px;
 }
 
 .footer-img {
-  flex-grow: 3;
+  width: 750px;
+  background-color: white;
 }
