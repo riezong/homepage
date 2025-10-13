@@ -126,6 +126,10 @@ h6 {
   padding: 62px 90px 126px 90px;
 }
 
+.my-work h1 {
+  margin-bottom: 1rem;
+}
+
 .work-card-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -159,19 +163,42 @@ h6 {
   line-height: 1.2;
 }
 
-.work-desc {
+.work-text {
   padding: 28px;
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.work-desc p:first-child {
+.work-text .heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.share-links {
+  flex-grow: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 24px;
+}
+
+.share-links img {
+  height: 28px;
+}
+
+.work-text .name {
+  color: black;
   font-family: "Playfair Display", serif;
   font-weight: 500;
   font-size: 24px;
 }
 
-.work-desc p:last-child {
+.work-text .caption {
   font-size: 18px;
+  line-height: 1.2;
 }
 
 .footer {
