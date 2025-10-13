@@ -71,7 +71,7 @@ h6 {
   left: 0px;
   top: 0px;
   z-index: -1;
-  background-color: aqua;
+  background-color: blue;
   transform: translateY(-250px) skewY(-12.7deg);
 }
 
@@ -118,7 +118,7 @@ h6 {
   gap: 28px;
 }
 
-.social-icons img {
+.bio .social-icons img {
   height: 34px;
 }
 
@@ -205,19 +205,25 @@ h6 {
   padding: 70px 90px;
   height: 706px;
   display: flex;
-  background-color: cyan;
+  /* gap: 48px; */
+  background-color: blue;
 }
 
 .contact-me {
   flex-grow: 2;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 40px;
+}
+
+.contact-me h1 {
+  color: white;
 }
 
 .contact-me p {
-  /* font-size: 20px; */
+  color: white;
   line-height: 1;
+  text-wrap: balance;
 }
 
 .contact-me .social-icons {
@@ -228,8 +234,13 @@ h6 {
   gap: 28px;
 }
 
+.contact-me .social-icons img {
+  height: 48px;
+}
+
 .footer-img {
   width: 750px;
+  flex-shrink: 0;
   background-color: white;
 }
 
