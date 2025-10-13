@@ -14,6 +14,7 @@ body {
   font-family:
     system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 25px;
 }
 img,
 picture,
@@ -40,6 +41,8 @@ h6 {
 }
 p {
   text-wrap: pretty;
+  font-weight: 400;
+  color: grey;
 }
 h1,
 h2,
@@ -48,6 +51,9 @@ h4,
 h5,
 h6 {
   text-wrap: balance;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  color: black;
 }
 #root,
 #__next {
@@ -55,24 +61,43 @@ h6 {
 }
 
 .dropshadow {
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.background-shape {
+  width: 100vw;
+  height: 800px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+  background-color: aqua;
+  transform: translateY(-250px) skewY(-12.7deg);
 }
 
 .about {
   padding: 62px 90px;
   display: flex;
-  background-color: cyan;
+  /* background-color: cyan; */
 }
 
 .profile-pic {
   width: 547px;
   height: 596px;
   flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-image: url("https://images.pexels.com/photos/4584065/pexels-photo-4584065.jpeg");
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
 }
-.profile-pic img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+
+.profile-pic h1 {
+  font-size: 72px;
+  color: white;
+  text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .bio {
@@ -81,7 +106,7 @@ h6 {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  justify-content: space-between;
   background-color: white;
 }
 
@@ -90,11 +115,11 @@ h6 {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  gap: 8px;
+  gap: 28px;
 }
 
 .social-icons img {
-  height: 32px;
+  height: 34px;
 }
 
 .my-work {
@@ -125,9 +150,28 @@ h6 {
   background-color: red;
 }
 
+.work-img p {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 54px;
+  color: white;
+  text-align: center;
+  line-height: 1.2;
+}
+
 .work-desc {
   padding: 28px;
   flex-grow: 1;
+}
+
+.work-desc p:first-child {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.work-desc p:last-child {
+  font-size: 18px;
 }
 
 .footer {
@@ -144,12 +188,17 @@ h6 {
   gap: 24px;
 }
 
+.contact-me p {
+  /* font-size: 20px; */
+  line-height: 1;
+}
+
 .contact-me .social-icons {
   flex-grow: 0;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  gap: 8px;
+  gap: 28px;
 }
 
 .footer-img {
