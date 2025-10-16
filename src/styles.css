@@ -6,7 +6,7 @@
 }
 * {
   margin: 0;
-  /* border: 1px solid navy; */
+  outline: 1px solid navy;
 }
 body {
   line-height: 1.5;
@@ -52,7 +52,7 @@ h5,
 h6 {
   text-wrap: balance;
   font-family: "Playfair Display", serif;
-  font-weight: 500;
+  font-weight: 400;
   color: black;
 }
 #root,
@@ -75,26 +75,37 @@ h6 {
   transform: translateY(-250px) skewY(-12.7deg);
 }
 
-.about {
+/* .about {
   padding: 62px 90px;
+} */
+
+.about .wrapper {
   display: flex;
-  /* background-color: cyan; */
+  padding: 62px 90px;
+  align-items: stretch;
+  justify-content: center;
 }
 
 .profile-pic {
   width: 547px;
   height: 596px;
   flex-shrink: 0;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
   background-image: url("https://images.pexels.com/photos/4584065/pexels-photo-4584065.jpeg");
   background-position: center;
   background-size: cover;
-  z-index: 1;
+  position: relative;
+  /* overflow: hidden; */
 }
 
+/* .profile-pic img {
+  width: 100%;
+  display: block;
+} */
+
 .profile-pic h1 {
+  position: relative;
+  top: 80%;
+  left: 10px;
   font-size: 72px;
   color: white;
   text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
@@ -244,12 +255,61 @@ h6 {
   background-color: white;
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 375px) and (max-width: 1024px) {
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family:
+      system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 24px;
+  }
+
   .work-card-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     row-gap: 60px;
     column-gap: 50px;
+  }
+
+  /* name is 40px from the top, 32px from the right */
+  /* caption box is 796x598 */
+  /* social icons are hidden */
+
+  .about .wrapper {
+    padding: 53px 44px;
+    display: block;
+  }
+
+  .profile-pic {
+    width: 50%;
+    height: 513px;
+    background-color: white;
+    float: left;
+    margin-right: 24px;
+  }
+
+  .profile-pic h1 {
+    width: fit-content;
+    top: 0px;
+    left: 86%;
+    text-wrap-mode: nowrap;
+  }
+
+  .bio {
+    display: block;
+    margin: 135px 78px 47px 62px;
+    padding: 115px 36px 92px 47px;
+    max-width: 796px;
+    height: auto;
+  }
+
+  .bio h1 {
+    text-align: center;
+  }
+
+  .bio .social-icons {
+    display: none;
   }
 }
 
