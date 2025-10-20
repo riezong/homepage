@@ -250,7 +250,8 @@ h6 {
 }
 
 .footer-img {
-  width: 750px;
+  min-width: 409px;
+  max-width: 750px;
   flex-shrink: 0;
   background-color: white;
 }
@@ -310,6 +311,49 @@ h6 {
 
   .bio .social-icons {
     display: none;
+  }
+
+  .footer {
+    padding: 56px 44px 83px 44px;
+    height: 706px;
+    display: flex;
+    /* gap: 48px; */
+    background-color: blue;
+  }
+
+  .contact-me {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .contact-me h1 {
+    color: white;
+  }
+
+  .contact-me p {
+    color: white;
+    line-height: 1;
+    text-wrap: balance;
+  }
+
+  .contact-me .social-icons {
+    flex-grow: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 28px;
+  }
+
+  .contact-me .social-icons img {
+    height: 48px;
+  }
+
+  .footer-img {
+    max-width: 409px;
+    flex-shrink: 0;
+    background-color: white;
   }
 }
 
