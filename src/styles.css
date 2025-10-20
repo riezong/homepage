@@ -6,7 +6,7 @@
 }
 * {
   margin: 0;
-  outline: 1px solid navy;
+  /* outline: 1px solid navy; */
 }
 body {
   line-height: 1.5;
